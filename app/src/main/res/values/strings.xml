@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Sunshine Guru</string>
+
+    <string name="action_refresh" translateable="false">Refresh</string>
+    <string name="title_activity_detail">Detailed Forecast</string>
+
+    <string name="settings_label">Settings page</string>
+    <string name="action_settings">Settings</string>
+    <string name="pref_location_label">Location</string>
+    <string name="pref_location_key" translateable="false">location</string>
+    <string name="pref_location_default" translateable="false">London</string>
+
+    <string name="wrong_location">Something wrong with location settings \n   or network...</string>
+
+
+    <string name="temp_unit_default">Metric (Celsius)</string>
+    <string name="temp_unit_far">Imperial (Fahrenheit)</string>
+    <string name="temp_unit_title">Temperature Units</string>
+    <string name="temp_unit_key">temp_units</string>
+    <string name="temp_unit_dialog_title">Set Temperature Unit</string>
+    <string name="menu_show_location">Show Location</string>
+
+    <!-- CONSTANTS -->
+
+    <string name="shared_preference_file_key">com.engstuff.sunshineguru.PREFERENCE_FILE_KEY</string>
+    <string name="last_weather_request">com.engstuff.sunshineguru.LAST_WEATHER_REQUEST</string>
+    <string name="curent_geo_coord">com.engstuff.sunshineguru.CURRENT_GEO_COORD</string>
+
+
+
+</resources>
