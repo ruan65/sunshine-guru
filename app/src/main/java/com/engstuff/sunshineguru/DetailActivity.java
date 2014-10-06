@@ -1,12 +1,15 @@
 package com.engstuff.sunshineguru;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.engstuff.sunshineguru.fragments.DetailedDayFragment;
+
+import static com.engstuff.sunshineguru.Main.getCurrentGeoCoords;
 
 
 public class DetailActivity extends ActionBarActivity {
@@ -34,6 +37,19 @@ public class DetailActivity extends ActionBarActivity {
         switch (item.getItemId()) {
             case R.id.action_settings:
                 startActivity(new Intent(this, SettingsActivity.class));
+                return true;
+            case R.id.menu_show_location:
+                Uri uri = null;
+                String geo = getCurrentGeoCoords(this);
+                if (geo != null) uri = Uri.parse(geo);
+
+                if (uri != null) {
+                    Intent intent = new Intent(Intent.ACTION_VIEW);
+                    intent.setData(uri);
+                    if (intent.resolveActivity(getPackageManager()) != null) {
+                        startActivity(intent);
+                    }
+                }
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
